@@ -26,7 +26,6 @@ public class Main {
         while(num!=0);
 
         s.close();
-
     }
 
     private static void login(){
