@@ -31,6 +31,8 @@ public abstract class User{
         return phonenumber;
     }
 
+    abstract public String toString();
+
     abstract public void menu(Database database, User user);
     
     
