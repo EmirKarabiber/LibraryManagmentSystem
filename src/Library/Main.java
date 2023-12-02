@@ -13,19 +13,19 @@ public class Main {
         System.out.println("Welcome to Library Managment System!");
 
         int num;
-        do {
-            System.out.println("0. Exit\n1. Login\n2. New User");
-            s = new Scanner(System.in);
-            num = s.nextInt();
+        // do {
+        //     System.out.println("0. Exit\n1. Login\n2. New User");
+        //     s = new Scanner(System.in);
+        //     num = s.nextInt();
 
-            switch(num){
-                case 1: login(); 
-                case 2: newuser(); 
-            }
-        }
-        while(num!=0);
+        //     switch(num){
+        //         case 1: login(); 
+        //         case 2: newuser(); 
+        //     }
+        // }
+        // while(num!=0);
 
-        s.close();
+
     }
 
     private static void login(){
