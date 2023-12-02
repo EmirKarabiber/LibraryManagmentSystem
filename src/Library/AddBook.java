@@ -14,6 +14,7 @@ public class AddBook implements IOOperation{
         if(database.getBook(name)>-1){
             System.out.println("There is a book with this name!\n");
             user.menu(database, user);
+            s.close();
             return;
         }else{
             book.setName(name);

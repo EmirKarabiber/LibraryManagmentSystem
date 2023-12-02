@@ -1,5 +1,7 @@
 package Library;
 
+import java.util.Scanner;
+
 public class Exit implements IOOperation{
     Scanner s;
     Database database;
@@ -25,7 +27,7 @@ public class Exit implements IOOperation{
             }
         }
         else {
-            user.menu(database,user),
+            user.menu(database,user);
         }    
     }
     private void login(){

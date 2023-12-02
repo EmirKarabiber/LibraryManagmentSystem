@@ -1,5 +1,7 @@
 package Library;
 
+import java.util.Scanner;
+
 public class DeleteAllData implements IOOperation {
 
     @Override
@@ -11,7 +13,7 @@ public class DeleteAllData implements IOOperation {
         if(i==1){
             database.DeleteAllData();
         }else{
-            user.menu(database,user),
+            user.menu(database,user);
         }
     }
     

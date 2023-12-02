@@ -12,7 +12,7 @@ public class Main {
         database = new Database();
         System.out.println("Welcome to Library Managment System!");
 
-        int num;
+       // int num;
         // do {
         //     System.out.println("0. Exit\n1. Login\n2. New User");
         //     s = new Scanner(System.in);
