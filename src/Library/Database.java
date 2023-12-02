@@ -186,7 +186,7 @@ public class Database {
         booknames.remove(i);
         saveBooks();
     }
-    public void deleteAllData(){
+    public void DeleteAllData(){
         if (usersfile.exists()){
             try{
                 usersfile.delete();
@@ -252,7 +252,7 @@ public class Database {
 
     private User getUserByName(String name) {
         User u = new NormalUser("");
-        for(User user : user) {
+        for(User user : users) {
             if(user.getName().matches(name)) {
                 u = user;
                 break;

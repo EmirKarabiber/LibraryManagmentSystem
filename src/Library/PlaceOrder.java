@@ -22,8 +22,8 @@ public class PlaceOrder implements IOOperation{
             int qty = s.nextInt();
             order.setQty(qty);
             order.setPrice(book.getPrice()*qty);
-            int bookindex = database.getBook(book.getName())
-            book.setQty(book.get.Qty()-1);
+            int bookindex = database.getBook(book.getName());
+            book.setQty(book.getQty()-1);
             database.addOrder(order, book, bookindex);
             System.out.println("Order placed successfully!\n");
         }
