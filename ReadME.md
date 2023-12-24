@@ -48,7 +48,6 @@ This project was developed by:
 - Rumeysa
 - Melike
 
-Contributions are welcome! Feel free to fork the project, make improvements, and submit pull requests.
 
 ## Acknowledgments:
 We developed this project as part of our Object-Oriented Programming class.
