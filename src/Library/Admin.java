@@ -1,52 +1,59 @@
 package Library;
 
-import java.util.Scanner;
+import javax.swing.JFrame;
 
-public class Admin extends User{
-    
-    public Admin(String name){
-        super(name);
-        this.operations = new IOOperation[]{
-            new ViewBooks(),
-            new AddBook(),
-            new DeleteBook(),
-            new Search(),
-            new DeleteAllData(),
-            new ViewOrders(),
-            new Exit()
-        };
-    }
+// İsim bilgisini alan yapıcı metot
+public class Admin extends User {
+	
+	public Admin(String name) {
+		super(name);
+		// Admin işlemlerini içeren IOOperation dizisini oluştur
+		this.operations = new IOOperation[] {
+				new ViewBooks(),
+				new AddBook(),
+				new DeleteBook(),
+				new Search(),
+				new DeleteAllData(),
+				new ViewOrders(),
+				new Exit()
+		};
+	}
+	// İsim, e-posta ve telefon numarası bilgilerini alan yapıcı metot
+	public Admin(String name, String email, String phonenumber) {
+		super(name, email, phonenumber);
 
-    public Admin(String name, String email, String phonenumber){
-        super(name, email, phonenumber);
-        this.operations = new IOOperation[]{
-            new ViewBooks(),
-            new AddBook(),
-            new DeleteBook(),
-            new Search(),
-            new DeleteAllData(),
-            new ViewOrders(),
-            new Exit()
-        };
-    }
+		// Admin işlemlerini içeren IOOperation dizisini oluştur
+		this.operations = new IOOperation[] {
+				new ViewBooks(),
+				new AddBook(),
+				new DeleteBook(),
+				new Search(),
+				new DeleteAllData(),
+				new ViewOrders(),
+				new Exit()
+		};
+	}
+	
+	// Kullanıcıya özel menüyü oluşturan metot
+	@Override
+	public void menu(Database database, User user) {
+		String[] data = new String[7];
+		data[0] = "Kitapları Görüntüle";
+		data[1] = "Kitap Ekle";
+		data[2] = "Kitap Sil";
+		data[3] = "Kitap Ara";
+		data[4] = "Tüm Datayı Sil";
+		data[5] = "Siparişleri Görüntüle";
+		data[6] = "Çıkış";
+		
+		// Menüyü oluşturan pencereyi al
+		JFrame frame = this.frame(data, database, user);
+		frame.setVisible(true);
+	}
+	
+	// Admin sınıfının özel toString metodu
+	public String toString() {
+		return name+"<N/>"+email+"<N/>"+phonenumber+"<N/>"+"Admin";
+	}
 
-    @Override
-    public void menu(Database database, User user){
-        System.out.println("1. View Books");
-        System.out.println("2. Add Book");
-        System.out.println("3. Delete Book");
-        System.out.println("4. Search");
-        System.out.println("5. Delete all data");
-        System.out.println("6. View Orders");
-        System.out.println("7. Exit");
-
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        this.operations[n-1].oper(database,user);
-        s.close();
-    }
-
-    public String toString(){
-        return name+"<N/>"+email+"<N/>"+phonenumber+"<N/>"+"Admin";
-    }
 }

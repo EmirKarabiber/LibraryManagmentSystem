@@ -1,54 +1,58 @@
 package Library;
 
-import java.util.Scanner;
+import javax.swing.JFrame;
 
-public class NormalUser extends User{
-    
-    public NormalUser(String name){
-        super(name);
-        this.operations = new IOOperation[]{
-            new ViewBooks(),
-            new Search(),
-            new PlaceOrder(),
-            new BorrowBook(),
-            new CalculateFine(),
-            new ReturnBook(),
-            new Exit()
-        };
-    }
+public class NormalUser extends User {
 
-    public NormalUser(String name, String email, String phonenumber){
-        super(name, email, phonenumber);
-        this.operations = new IOOperation[]{
-            new ViewBooks(),
-            new Search(),
-            new PlaceOrder(),
-            new BorrowBook(),
-            new CalculateFine(),
-            new ReturnBook(),
-            new Exit()
-        };
-    }
-    
-
-    @Override
-    public void menu(Database database, User user){
-        System.out.println("1. View Books");
-        System.out.println("2. Search");
-        System.out.println("3. Place Order");
-        System.out.println("4. Borrow Book");
-        System.out.println("5. Calculate Fine");
-        System.out.println("6. Return Book");
-        System.out.println("7. Exit");
-
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        this.operations[n-1].oper(database,user);
-        s.close();
-
-    }
-
-    public String toString(){
-        return name+"<N/>"+email+"<N/>"+phonenumber+"<N/>"+"Normal";
-    }
+	// Tek parametreli kurucu metod, sadece ismi içerir
+	public NormalUser(String name) {
+		super(name);
+		// Normal kullanıcının gerçekleştirebileceği işlemler tanımlanır
+		this.operations = new IOOperation[] {
+				new ViewBooks(),
+				new Search(),
+				new PlaceOrder(),
+				new BorrowBook(),
+				new CalculateFine(),
+				new ReturnBook(),
+				new Exit()
+		};
+	}
+	// Üç parametreli kurucu metod, isim, email ve telefon numarasını içerir
+	public NormalUser(String name, String email, String phonenumber) {
+		super(name, email, phonenumber);
+		// Normal kullanıcının gerçekleştirebileceği işlemler tanımlanır
+		this.operations = new IOOperation[] {
+				new ViewBooks(),
+				new Search(),
+				new PlaceOrder(),
+				new BorrowBook(),
+				new CalculateFine(),
+				new ReturnBook(),
+				new Exit()
+		};
+	}
+	// Menüyü oluşturan metot, kullanıcının gerçekleştirebileceği işlemleri içerir
+	@Override
+	public void menu(Database database, User user) {
+		
+		// Menü seçenekleri oluşturuluyor
+		String[] data = new String[7];
+		data[0] = "Kitapları Görüntüle";
+		data[1] = "Kitap Ara";
+		data[2] = "Sipariş ver";
+		data[3] = "Kitap Ödünç Al";
+		data[4] = "Ceza Hesapla";
+		data[5] = "Kitap iade et";
+		data[6] = "Çıkış";
+		
+		// Menüyü oluşturan frame oluşturuluyor ve görünür hale getirilir
+		JFrame frame = this.frame(data, database, user);
+		frame.setVisible(true);
+	}
+	// Nesnenin String temsilini döndüren metot
+	public String toString() {
+		return name+"<N/>"+email+"<N/>"+phonenumber+"<N/>"+"Normal";
+	}
+	
 }
