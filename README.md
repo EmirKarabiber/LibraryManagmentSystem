@@ -44,8 +44,8 @@ This Java project is a library management automation system designed to streamli
 ## Contributing:
 This project was developed by:
 - Emir
-- Ömer Faruk
-- Rumeysa
+- Ömer Faruk 
+- Rumeysa Çiçek
 - Melike Zehra Budak
 
 Contributions are welcome! Feel free to fork the project, make improvements, and submit pull requests.
