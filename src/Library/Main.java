@@ -185,6 +185,15 @@ public class Main {
 					JOptionPane.showMessageDialog(new JFrame(), "Kullanıcı adı hali hazırda kullanılıyor!\nBaşka bir Kullanıcı adı deneyin");
 					return;
 				}
+				
+				// Telefon numarası bir tamsayı olmalı
+				try {
+					int phoneNumber = Integer.parseInt(phonenumber.getText().toString());
+				} catch (NumberFormatException ex) {
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(), "Telefon numarası geçerli bir tamsayı olmalıdır! Hata: " + ex.getMessage());
+					return;
+				}
 				// Kullanıcı oluştur
 				User user;
 				if (admin.isSelected()) {
