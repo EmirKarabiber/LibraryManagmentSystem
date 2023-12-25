@@ -28,7 +28,7 @@ public class ViewBooks implements IOOperation {
 		panel.setBackground(null);
 		
 		// Tablonun başlık satırının eklenmesi
-		String[] row1 = new String[] {"İsim", "Yazar", "Yayıncı", "Koleksiyon", "Satılık", "Ücret", "Ö.A.C."};
+		String[] row1 = new String[] {"İsim", "Yazar", "Yayıncı", "Koleksiyon", "Satılık", "Ücret", "Ö.A.K."};
 		for (String s : row1) {
 			JLabel label = label(s);
 			panel.add(label);
