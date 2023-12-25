@@ -34,8 +34,6 @@ This Java project is a library management automation system designed to streamli
 ## Tools and Technologies:
 - **Programming Language:**
   - Java
-- **Libraries:**
-  - (Specify any libraries used)
 - **Development Environment:**
   - Visual Studio Code (VS Code)
 - **Version Control:**
@@ -43,10 +41,10 @@ This Java project is a library management automation system designed to streamli
 
 ## Contributing:
 This project was developed by:
-- Emir
-- Ömer Faruk
-- Rumeysa
-- Melike
+- Emir Karabiber
+- Ömer Faruk Dolanbay
+- Rumeysa Çiçek
+- Melike Zehra Budak
 
 Contributions are welcome! Feel free to fork the project, make improvements, and submit pull requests.
 
