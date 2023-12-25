@@ -164,7 +164,6 @@ public class Main {
 					JOptionPane.showMessageDialog(new JFrame(), "Kullanıcı adı boş olamaz!");
 					return;
 				}
-				
 				// Telefon numarası boş olmamalı
 				if (phonenumber.getText().toString().matches("")) {
 					JOptionPane.showMessageDialog(new JFrame(), "Telefon numarası boş olamaz!");
@@ -185,7 +184,6 @@ public class Main {
 					JOptionPane.showMessageDialog(new JFrame(), "Kullanıcı adı hali hazırda kullanılıyor!\nBaşka bir Kullanıcı adı deneyin");
 					return;
 				}
-
 				// Telefon numarası bir tamsayı olmalı
 				try {
 					int phoneNumber = Integer.parseInt(phonenumber.getText().toString());

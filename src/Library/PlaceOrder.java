@@ -77,6 +77,13 @@ public class PlaceOrder implements IOOperation {
 					order.setQty(qt);
 					order.setPrice(book.getPrice()*qt);
 					int bookindex = database.getBook(book.getName());
+					
+					if(book.getQty() < qt)
+					{
+						JOptionPane.showMessageDialog(new JFrame(), "İstediğiniz sayıda satılık kitap bulunmamaktadır.");
+						return;
+					}
+
 					book.setQty(book.getQty()-qt);
 					database.addOrder(order, book, bookindex);
 					JOptionPane.showMessageDialog(new JFrame(), "Siparişiniz başarıyla gerçekleşmiştir!");
