@@ -46,7 +46,7 @@ This project was developed by:
 - Emir
 - Ömer Faruk
 - Rumeysa
-- Melike
+- Melike Zehra Budak
 
 Contributions are welcome! Feel free to fork the project, make improvements, and submit pull requests.
 
