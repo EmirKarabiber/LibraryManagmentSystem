@@ -158,16 +158,13 @@ public class Main {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-                // Kullanıcı adının varlığını kontrol et
-				if (database.userExists(name.getText().toString())) {
-					JOptionPane.showMessageDialog(new JFrame(), "Kullanıcı adı hali hazırda kullanılıyor!\nBaşka bir Kullanıcı adı deneyin");
-					return;
-				}
+                
 				// Kullanıcı adı boş olmamalı
 				if (name.getText().toString().matches("")) {
 					JOptionPane.showMessageDialog(new JFrame(), "Kullanıcı adı boş olamaz!");
 					return;
 				}
+				
 				// Telefon numarası boş olmamalı
 				if (phonenumber.getText().toString().matches("")) {
 					JOptionPane.showMessageDialog(new JFrame(), "Telefon numarası boş olamaz!");
@@ -181,6 +178,11 @@ public class Main {
 				// Hesap türü seç
 				if (!admin.isSelected() && !normaluser.isSelected()) {
 					JOptionPane.showMessageDialog(new JFrame(), "Lütfen bir hesap türü seçin!");
+					return;
+				}
+				// Kullanıcı adının varlığını kontrol et
+				if (database.userExists(name.getText().toString())) {
+					JOptionPane.showMessageDialog(new JFrame(), "Kullanıcı adı hali hazırda kullanılıyor!\nBaşka bir Kullanıcı adı deneyin");
 					return;
 				}
 				// Kullanıcı oluştur
