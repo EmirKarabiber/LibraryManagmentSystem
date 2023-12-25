@@ -34,8 +34,6 @@ This Java project is a library management automation system designed to streamli
 ## Tools and Technologies:
 - **Programming Language:**
   - Java
-- **Libraries:**
-  - (Specify any libraries used)
 - **Development Environment:**
   - Visual Studio Code (VS Code)
 - **Version Control:**
